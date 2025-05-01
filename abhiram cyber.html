@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>LearnHub - Education Platform</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            background: #f9f9f9;
+            color: #333;
+            line-height: 1.6;
+        }
+        
+        header {
+            background: #0077cc;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            margin-top: 10px;
+        }
+        
+        nav ul li {
+            margin: 0 15px;
+        }
+        
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        
+        section {
+            padding: 40px 20px;
+            max-width: 900px;
+            margin: auto;
+        }
+        
+        .course-list {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+        
+        .course-card {
+            background: white;
+            padding: 20px;
+            border: 1px solid #ddd;
+            flex: 1 1 200px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+            border-radius: 10px;
+            text-align: center;
+        }
+        
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            margin-top: 20px;
+        }
+        
+        form input,
+        form textarea {
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 1rem;
+        }
+        
+        form button {
+            padding: 10px;
+            background: #0077cc;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1rem;
+        }
+        
+        footer {
+            background: #222;
+            color: white;
+            text-align: center;
+            padding: 15px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>LearnHub</h1>
+        <nav>
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#courses">Courses</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="about">
+        <h2>About Us</h2>
+        <p>LearnHub is an online platform providing quality education resources for students worldwide. Learn new skills anytime, anywhere!</p>
+    </section>
+
+    <section id="courses">
+        <h2>Courses</h2>
+        <div class="course-list">
+            <div class="course-card">HTML & CSS Basics</div>
+            <div class="course-card">JavaScript Essentials</div>
+            <div class="course-card">Python Programming</div>
+        </div>
+        <button onclick="showMoreCourses()">Show More</button>
+    </section>
+
+    <section id="contact">
+        <h2>Contact Us</h2>
+        <form onsubmit="submitForm(event)">
+            <input type="text" placeholder="Your Name" required />
+            <input type="email" placeholder="Your Email" required />
+            <textarea placeholder="Your Message" required></textarea>
+            <button type="submit">Send</button>
+        </form>
+        <p id="form-msg"></p>
+    </section>
+
+    <footer>
+        <p>© 2025 LearnHub. All rights reserved.</p>
+    </footer>
+
+    <script>
+        function showMoreCourses() {
+            alert("More courses coming soon!");
+        }
+
+        function submitForm(event) {
+            event.preventDefault();
+            document.getElementById("form-msg").textContent = "Thanks for contacting us! We'll get back to you soon.";
+        }
+    </script>
+
+</body>
+
+</html>
